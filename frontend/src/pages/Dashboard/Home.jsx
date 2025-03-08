@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { LuHandCoins, LuWalletMinimal } from "react-icons/lu";
 import { IoMdCard } from "react-icons/io";
 
-import DashboardLayout from "../../components/layouts/DashboardLayout";
+import DashboardLayout from "../../components/Layouts/DashboardLayout";
 import InfoCard from "../../components/Cards/InfoCard";
+import RecentTransactions from "../../components/Dashboard/RecentTransactions";
 
 import { useUserAuth } from "../../hooks/useUserAuth";
 
@@ -44,6 +45,7 @@ const Home = () => {
     fetchDashboardData();
     return () => {};
   }, []);
+
   return (
     <DashboardLayout activeMenu="Dashboard">
       <div className="my-5 mx-auto">
@@ -65,6 +67,13 @@ const Home = () => {
             label="Total Expense"
             value={addThousandSeparator(dashboardData?.totalExpense || 0)}
             color="bg-red-500"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <RecentTransactions
+            transactions={dashboardData?.recentTransactions}
+            onSeeMore={() => navigate("/expense")}
           />
         </div>
       </div>
