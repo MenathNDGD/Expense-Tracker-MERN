@@ -3,7 +3,7 @@ import React from "react";
 import { LuTrendingUpDown } from "react-icons/lu";
 
 import CARD_2 from "../../assets/images/card2.png";
-import StatsInfoCard from "../common/StatsInfoCard";
+import StatsInfoCard from "../Common/StatsInfoCard";
 
 const AuthLayout = ({ children }) => {
   return (
