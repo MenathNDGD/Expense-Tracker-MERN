@@ -11,6 +11,7 @@ export const useUserAuth = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let isMounted = true;
     if (user) return;
 
     const fetchUserInfo = async () => {
@@ -35,5 +36,5 @@ export const useUserAuth = () => {
     return () => {
       isMounted = false;
     };
-  }, [updateUser, clearUser, navigate]);
+  }, [updateUser, clearUser, navigate, user]);
 };
