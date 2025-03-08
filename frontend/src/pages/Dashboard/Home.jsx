@@ -7,6 +7,7 @@ import DashboardLayout from "../../components/Layouts/DashboardLayout";
 import InfoCard from "../../components/Cards/InfoCard";
 import RecentTransactions from "../../components/Dashboard/RecentTransactions";
 import FinanceOverview from "../../components/Dashboard/FinanceOverview";
+import ExpenseTransactions from "../../components/Dashboard/ExpenseTransactions";
 
 import { useUserAuth } from "../../hooks/useUserAuth";
 
@@ -81,6 +82,11 @@ const Home = () => {
             totalBalance={dashboardData?.totalBalance || 0}
             totalIncome={dashboardData?.totalIncome || 0}
             totalExpense={dashboardData?.totalExpense || 0}
+          />
+
+          <ExpenseTransactions
+            transactions={dashboardData?.last30DaysExpenses?.transactions || []}
+            onSeeMore={() => navigate("/expense")}
           />
         </div>
       </div>
