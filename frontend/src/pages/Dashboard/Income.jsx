@@ -5,6 +5,7 @@ import DashboardLayout from "../../components/Layouts/DashboardLayout";
 import IncomeOverview from "../../components/Income/IncomeOverview";
 import Modal from "../../components/Common/Modal";
 import AddIncomeForm from "../../components/Income/AddIncomeForm";
+import IncomeList from "../../components/Income/IncomeList";
 
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
@@ -95,6 +96,13 @@ const Income = () => {
               onAddIncome={() => setOpenAddIncomeModal(true)}
             />
           </div>
+          <IncomeList
+            transactions={incomeData}
+            onDelete={(id) => {
+              setOpenDeleteAlert({ show: true, data: id });
+            }}
+            onDownload={handleDownloadIncomeDetails}
+          />
         </div>
 
         <Modal
