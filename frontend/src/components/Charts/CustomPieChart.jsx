@@ -61,7 +61,7 @@ const CustomPieChart = ({
               fontWeight={"semi-bold"}
               className="capitalize"
             >
-              {totalAmount}
+              USD {totalAmount}
             </text>
           </>
         )}
