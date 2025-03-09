@@ -47,6 +47,7 @@ const CustomPieChart = ({
               textAnchor="middle"
               fill="#666"
               fontSize={"14px"}
+              className="capitalize"
             >
               {label}
             </text>
@@ -58,6 +59,7 @@ const CustomPieChart = ({
               fill="#333"
               fontSize={"24px"}
               fontWeight={"semi-bold"}
+              className="capitalize"
             >
               {totalAmount}
             </text>
