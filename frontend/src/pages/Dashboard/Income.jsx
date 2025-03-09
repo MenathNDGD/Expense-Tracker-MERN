@@ -11,7 +11,11 @@ import DeleteAlert from "../../components/Common/DeleteAlert";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 
+import { useUserAuth } from "../../hooks/useUserAuth";
+
 const Income = () => {
+  useUserAuth();
+
   const [incomeData, setIncomeData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [openAddIncomeModal, setOpenAddIncomeModal] = useState(false);
