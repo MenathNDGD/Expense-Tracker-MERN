@@ -6,6 +6,7 @@ import IncomeOverview from "../../components/Income/IncomeOverview";
 import Modal from "../../components/Common/Modal";
 import AddIncomeForm from "../../components/Income/AddIncomeForm";
 import IncomeList from "../../components/Income/IncomeList";
+import DeleteAlert from "../../components/Common/DeleteAlert";
 
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
@@ -111,6 +112,16 @@ const Income = () => {
           title="Add Income"
         >
           <AddIncomeForm onAddIncome={handleAddIncome} />
+        </Modal>
+        <Modal
+          isOpen={openDeleteAlert.show}
+          onClose={() => setOpenDeleteAlert({ show: false, data: null })}
+          title="Delete Income"
+        >
+          <DeleteAlert
+            content="Are you sure you want to delete this income?"
+            onDelete={() => deleteIncome(openDeleteAlert.data)}
+          />
         </Modal>
       </div>
     </DashboardLayout>
