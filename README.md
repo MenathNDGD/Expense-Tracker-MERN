@@ -32,6 +32,7 @@
 4. 📁 [Folder Structure](#folder-structure)
 5. 🤸 [Quick Start](#quick-start)
 6. 🕸️ [Code Snippets](#scode-nippets)
+7. 🚀 [More](#more)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -299,6 +300,8 @@ export const SIDE_MENU_DATA = [
 ```
 
 </details>
+
+## <a name="more">🚀 More</a>
 
 **Feel free to tailor these contents according to your specific preferences or any additional details you want to include!**
 
