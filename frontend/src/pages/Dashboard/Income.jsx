@@ -102,7 +102,7 @@ const Income = () => {
   useEffect(() => {
     fetchIncomeDetails();
     return () => {};
-  }, []);
+  });
 
   return (
     <DashboardLayout activeMenu={"Income"}>
