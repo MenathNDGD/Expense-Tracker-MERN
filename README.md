@@ -96,7 +96,7 @@ Expense-Tracker-MERN/
        ├── hooks            # Custom React hooks for reusing logic across components.
        ├── pages/           # Page components representing different views, like authentication and dashboard pages.
        │   ├── Auth         # Contains authentication-related pages, including login and registration.
-       │   └── Dashboard    # Includes the main dashboard page where users can track their expenses and view analytics.\
+       │   └── Dashboard    # Includes the main dashboard page where users can track their expenses and view analytics.
        └── utils            # Utility functions for formatting dates, numbers, and other reusable logic.
 ```
 
@@ -145,7 +145,7 @@ npm run dev
 
 Open [http://localhost:5174](http://localhost:5174) in your browser to view the project.
 
-## <a name="usage">🚀 Usage</a>
+## <a name="code-snippets">🕸️ Code Snippets</a>
 
 <details>
 <summary><code>utils --> helper.js</code></summary>
@@ -222,6 +222,8 @@ export const prepareExpenseLineChartData = (data = []) => {
 };
 ```
 
+</details>
+
 <details>
 <summary><code>utils --> apiPaths.js</code></summary>
 
@@ -254,6 +256,8 @@ export const API_PATHS = {
   },
 };
 ```
+
+</details>
 
 <details>
 <summary><code>utils --> data.js</code></summary>
@@ -293,6 +297,8 @@ export const SIDE_MENU_DATA = [
   },
 ];
 ```
+
+</details>
 
 **Feel free to tailor these contents according to your specific preferences or any additional details you want to include!**
 
