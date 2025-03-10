@@ -1,18 +1,25 @@
 import React from "react";
-import { LuArrowRight } from "react-icons/lu";
+import { LuDollarSign, LuShoppingCart } from "react-icons/lu";
 import moment from "moment";
 
 import TransactionInfoCard from "../Cards/TransactionInfoCard";
 
-const RecentTransactions = ({ transactions, onSeeMore }) => {
+const RecentTransactions = ({ transactions, onSeeIncome, onSeeExpense }) => {
   return (
     <div className="card">
       <div className="flex items-center justify-between">
         <h5 className="text-lg">Recent Transactions</h5>
 
-        <button className="card-btn" onClick={onSeeMore}>
-          See More <LuArrowRight className="text-base" />
-        </button>
+        <div className="flex items-center gap-3">
+          <button className="card-btn" onClick={onSeeIncome}>
+            Income
+            <LuDollarSign className="text-base" />
+          </button>
+          <button className="card-btn" onClick={onSeeExpense}>
+            Expense
+            <LuShoppingCart className="text-base" />
+          </button>
+        </div>
       </div>
 
       <div className="mt-6">
